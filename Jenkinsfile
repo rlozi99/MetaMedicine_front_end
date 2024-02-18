@@ -38,14 +38,10 @@ pipeline {
        
         stage('Build and Push Docker Image to ACR') {
             steps {
-                script {
-                    
+                script {   
                     withCredentials([usernamePassword(credentialsId: 'acr-credential-id', passwordVariable: 'ACR_PASSWORD', usernameVariable: 'ACR_USERNAME')]) {
-                        // Log in to ACR
                         sh "az acr login --name $CONTAINER_REGISTRY --username $ACR_USERNAME --password $ACR_PASSWORD"
 
-                        // Build and push Docker image to ACR
-                        // 변경: 이미지 이름을 $CONTAINER_REGISTRY/$IMAGE_NAME으로 수정
                         sh "docker build -t $CONTAINER_REGISTRY/$REPO:$TAG ."
                         sh "docker push $CONTAINER_REGISTRY/$REPO:$TAG"
                     }
