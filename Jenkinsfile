@@ -45,7 +45,7 @@ pipeline {
                         env.DIR_NAME = "staging"
                     } else if (branch == 'prod') {
                         env.TAG = 'latest'
-                        env.DIR_NAME = "droduction"
+                        env.DIR_NAME = "production"
                     } else {
                         env.TAG = 'unknown'
                         env.DIR_NAME = "unknown"
