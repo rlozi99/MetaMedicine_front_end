@@ -96,7 +96,7 @@ pipeline {
                 }
             }
         }
-        stage('Commit and Push Changes to GitOps Repository..') {
+        stage('Commit and Push Changes to GitOps Repository') {
             steps {
                 script {
                     dir("overlays/${env.DIR_NAME}") {
