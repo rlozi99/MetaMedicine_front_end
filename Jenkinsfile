@@ -8,8 +8,8 @@ pipeline {
         NAMESPACE = 'front'
 
         CONTAINER_REGISTRY = 'goodbirdacr.azurecr.io'
-        REPO = 'medicine/front'
-        IMAGE_NAME = 'medicine/front:latest'
+        REPO = 'metahospital/front'
+        IMAGE_NAME = 'metahospital/front:latest'
 
         GIT_CREDENTIALS_ID = 'jenkins-git-access'
 
