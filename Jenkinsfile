@@ -14,7 +14,7 @@ pipeline {
         GIT_CREDENTIALS_ID = 'jenkins-git-access'
 
         NEW_IMAGE_TAG = "${env.BRANCH_NAME}-${env.BUILD_ID}"
-        GIT_REPOSITORY = "rlozi99/metamedical_front_ops" 
+        GIT_REPOSITORY = "rlozi99/MetaMedicine_front_deploy" 
         KUBECONFIG = '/home/azureuser/.kube/config'
     }
 
