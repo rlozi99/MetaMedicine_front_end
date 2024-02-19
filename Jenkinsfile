@@ -128,10 +128,18 @@ pipeline {
         }
     }
 }
+<<<<<<< HEAD
 
 
+=======
+}
+>>>>>>> 96ea99650a0effba0de26e7baaa8b768be595388
 def withKubeConfig(Map args, Closure body) {
     withCredentials([file(credentialsId: args.credentialsId, variable: 'KUBECONFIG')]) {
         body.call()
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 96ea99650a0effba0de26e7baaa8b768be595388
