@@ -8,7 +8,7 @@ pipeline {
         RESOURCE_GROUP = 'AKS'
         REPO = 'medicine/front'
         IMAGE_NAME = 'medicine/front:latest'
-
+//
         TAG_VERSION = "v1.0.Beta"
         TAG = "${TAG_VERSION}${env.BUILD_ID}"
         NAMESPACE = 'front'
